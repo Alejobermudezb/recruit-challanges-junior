@@ -31,6 +31,7 @@ let clientes: Cliente[] = [
 
 ];
 
+// Funcion para calcular la satisfaccíon total. 
 function calcularSatisfaccionTotal(asignacion: Map<Cliente, Entrenador>): number {
     let satisfaccionTotal = 0;
     for (const [cliente, entrenador] of asignacion.entries()) {
@@ -38,7 +39,7 @@ function calcularSatisfaccionTotal(asignacion: Map<Cliente, Entrenador>): number
     }
     return satisfaccionTotal;
   }
-
+// Funcíon para asignar los clientes a los entrenadores.
 function asignarClientes(): Map<Cliente, Entrenador> {
     const asignacion: Map<Cliente, Entrenador> = new Map();
   
@@ -61,7 +62,7 @@ function asignarClientes(): Map<Cliente, Entrenador> {
   
     return asignacion;
   }
-
+// Ejecutamos la asignacion de clientes y la satisfaccíon total.
 let asignacionFinal = asignarClientes();
 let satisfaccionTotal = calcularSatisfaccionTotal(asignacionFinal);
   
